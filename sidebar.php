@@ -1,5 +1,5 @@
 
-    <div class="grid_4" id="sidebar">
+    <div id="sidebar">
 
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
 	    <div class="widget">
@@ -14,12 +14,12 @@
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
 	    <div class="widget">
 			<h3><?php _e('Recent Comments'); ?></h3>
-            <ul class="unstyled">
-            <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
-            <?php while($comments->next()): ?>
-                <li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?></a>: <?php $comments->excerpt(50, '...'); ?></li>
-            <?php endwhile; ?>
-            </ul>
+					<ul class="unstyled">
+					<?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
+					<?php while($comments->next()): ?>
+							<li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?></a>: <?php $comments->excerpt(50, '...'); ?></li>
+					<?php endwhile; ?>
+					</ul>
 	    </div>
         <?php endif; ?>
 
