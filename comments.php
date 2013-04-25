@@ -35,7 +35,7 @@
 				</p>
                 <?php endif; ?>
 				<p><textarea rows="3" name="text" placeholder="comment here..."><?php $this->remember('text'); ?></textarea></p>
-				<p><?php //Captcha_Plugin::output(); ?></p>
+				<p><?php Captcha_Plugin::output(); ?></p>
 				<p><button type="submit" value="<?php //_e('Ìá½»ÆÀÂÛ'); ?>" class="btn btn-primary" />Submit</p>
 			</form>
             </div>

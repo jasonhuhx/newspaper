@@ -1,6 +1,5 @@
 
     <div id="sidebar">
-
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
 	    <div class="widget">
 			<h3><?php _e('New Articles'); ?></h3>
@@ -42,11 +41,13 @@
             </ul>
 		</div>
         <?php endif; ?>
-
+				
+		
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowOther', $this->options->sidebarBlock)): ?>
 		<div class="widget">
 			<h3><?php _e('Others'); ?></h3>
             <ul class="unstyled">
+								<li><a href="blogroll">My Friends</li>
                 <?php if($this->user->hasLogin()): ?>
 					<li class="last"><a href="<?php $this->options->adminUrl(); ?>"><?php _e('Admin'); ?> (<?php $this->user->screenName(); ?>)</a></li>
                     <li><a href="<?php $this->options->logoutUrl(); ?>"><?php _e('Logout'); ?></a></li>
