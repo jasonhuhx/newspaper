@@ -28,7 +28,7 @@
     <!--     <form id="search" method="post" action="/">
     <div><input type="text" name="s" class="text" size="20" /> <input type="submit" class="submit" value="<?php //_e('搜索'); ?>" /></div>
     </form> -->
-    <div class="span8" id="logo">
+    <div class="span7 offset1" id="logo">
         <h1><a href="<?php $this->options->siteUrl(); ?>">
         <?php if ($this->options->logoUrl): ?>
         <img height="60" src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />

@@ -12,21 +12,21 @@
  ?>
 
     <div class="row" id="content">
-    	<div class="span8" id="articles">
+    	<div class="span6 offset1" id="articles">
 			<?php while($this->next()): ?>
 		        <div class="post">
 					<h2 class="entry_title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-					<p class="entry_data">
-						<span><?php _e('作者：'); ?><?php $this->author(); ?></span>
-						<span><?php _e('发布时间：'); ?><?php $this->date('F j, Y'); ?></span>
-						<span><?php _e('分类：'); ?><?php $this->category(','); ?></span>
-						<a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('No Comments', '1 Comment', '%d Comments'); ?></a>
-					</p>
-					<?php $this->content('阅读剩余部分...'); ?>
+					<?php $this->content('Continue...'); ?>
 		        </div>
 			<?php endwhile; ?>
 
-			<?php $this->pageNav(); ?>
+	    	<div class="pagination pagination-left">
+		    	<?php $this->pageNav(); ?>
+		    	<script>
+					$('.page-navigator').contents().unwrap().wrapAll("<ul></ul>");
+					$('li.current').addClass('active');
+				</script>
+			</div>
 		</div>  <!-- end of #articles -->
 		
 		
@@ -38,6 +38,6 @@
     
     </div><!-- end #content-->
 	
-	<div class="row">
+	
 		<?php $this->need('footer.php'); ?>
-	</div>
+	

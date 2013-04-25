@@ -1,18 +1,38 @@
 <?php $this->need('header.php'); ?>
 
-    <div class="grid_10" id="content">
-        <div class="post">
+    <div id="content">
+        
+		<div class="row apost">
+			<div class="span10 offset1 post">
+
 			<h2 class="entry_title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+
 			<p class="entry_data">
-				<span><?php _e('作者：'); ?><?php $this->author(); ?></span>
-				<span><?php _e('发布时间：'); ?><?php $this->date('F j, Y'); ?></span>
-				<?php _e('分类：'); ?><?php $this->category(','); ?>
+				<span><?php //_e('作者：'); ?><?php //$this->author(); ?></span>
+				
+				
 			</p>
 			<?php $this->content(); ?>
-			<p class="tags"><?php _e('标签'); ?>: <?php $this->tags(', ', true, 'none'); ?></p>
+
+			<div class="muted">
+				
+			<p class="text-left">
+				<?php $this->date('F j, Y'); ?></div>
+			</p>
+
+			<p class="text-right">
+				CATEGORY: <?php $this->category(','); ?><br>
+				TAGS: <?php $this->tags(', ', true, 'none'); ?>
+			</p></div>
+		</div>
 		</div>
 
-		<?php $this->need('comments.php'); ?>
+
+		<div class="row">
+			<div class="span10 offset1">
+			<?php $this->need('comments.php'); ?>
+			</div>
+		</div>
+
     </div><!-- end #content-->
-	<?php $this->need('sidebar.php'); ?>
 	<?php $this->need('footer.php'); ?>
