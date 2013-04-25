@@ -1,6 +1,6 @@
 <?php
 /**
- * 这是 Typecho 系统的一套默认皮肤
+ * 灵感来源于报纸的主题
  * 
  * @package Newspaper
  * @author 杰森葱
