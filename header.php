@@ -23,20 +23,18 @@
 
 <body>
 <div class="container">
-    
-<div class="row" id="header">
+<div id="header">
+    <div class="row">
     <!--     <form id="search" method="post" action="/">
     <div><input type="text" name="s" class="text" size="20" /> <input type="submit" class="submit" value="<?php //_e('搜索'); ?>" /></div>
     </form> -->
-    <div class="span7 offset1" id="logo">
-        <h1><a href="<?php $this->options->siteUrl(); ?>">
-        <?php if ($this->options->logoUrl): ?>
-        <img height="60" src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-        <?php endif; ?>
-        <?php $this->options->title() ?>
-        </a></h1>
-        <p class="description"><?php $this->options->description() ?></p>
+        <div class="span10 offset1" id="logo">
+            <a href="<?php $this->options->siteUrl(); ?>">
+            <?php if ($this->options->logoUrl): ?>
+            <img height="60" src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
+            <?php endif; ?>
+            <?php $this->options->title() ?>
+            </a><span class="description"><?php $this->options->description() ?></span>
+        </div>
     </div>
-</div><!-- end #header -->
-
-
+</div> <!-- end #header -->

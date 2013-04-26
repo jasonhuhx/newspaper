@@ -2,7 +2,7 @@
     <div id="sidebar">
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
 	    <div class="widget">
-			<h3><?php _e('New Articles'); ?></h3>
+			<div class="sidebar_title spacer spacer_btm"><?php _e('New Articles'); ?></div>
             <ul class="unstyled">
                 <?php $this->widget('Widget_Contents_Post_Recent')
                 ->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
@@ -12,7 +12,7 @@
     
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
 	    <div class="widget">
-			<h3><?php _e('Recent Comments'); ?></h3>
+			<div class="sidebar_title spacer spacer_btm"><?php _e('Recent Comments'); ?></div>
 					<ul class="unstyled">
 					<?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
 					<?php while($comments->next()): ?>
@@ -24,7 +24,7 @@
 
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowCategory', $this->options->sidebarBlock)): ?>
         <div class="widget">
-			<h3><?php _e('Categories'); ?></h3>
+			<div class="sidebar_title spacer spacer_btm"><?php _e('Categories'); ?></div>
             <ul class="unstyled">
                 <?php $this->widget('Widget_Metas_Category_List')
                 ->parse('<li><a href="{permalink}">{name}</a> ({count})</li>'); ?>
@@ -34,7 +34,7 @@
 
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowArchive', $this->options->sidebarBlock)): ?>
         <div class="widget">
-			<h3><?php _e('Archive'); ?></h3>
+			<div class="sidebar_title spacer spacer_btm"><?php _e('Archive'); ?></div>
             <ul class="unstyled">
                 <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
                 ->parse('<li><a href="{permalink}">{date}</a></li>'); ?>
@@ -45,7 +45,7 @@
 		
         <?php if (empty($this->options->sidebarBlock) || in_array('ShowOther', $this->options->sidebarBlock)): ?>
 		<div class="widget">
-			<h3><?php _e('Others'); ?></h3>
+			<div class="sidebar_title spacer spacer_btm"><?php _e('Others'); ?></div>
             <ul class="unstyled">
 								<li><a href="blogroll">My Friends</li>
                 <?php if($this->user->hasLogin()): ?>
